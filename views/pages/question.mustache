@@ -1,0 +1,25 @@
+{{>partials/header}}
+
+<div class="container">
+  {{#question}}
+  <h1>{{title}}</h1>
+  <p>{{description}}</p>
+  <hr>
+  <form method="POST" , action="/saveanswer">
+    <h3 class="mb-3">Responder a pergunta:</h3>
+    <input type="hidden" name="id" value="{{id}}">
+    <textarea name="answer" class="form-control mb-3"></textarea>
+    <button type="submit" class="btn btn-primary">Enviar resposta</button>
+  </form>
+  {{/question}}
+  <hr>
+  {{#answers}}
+  <div class="card mb-3">
+    <div class="card-body">
+      <p>{{answer}}</p>
+    </div>
+  </div>
+  {{/answers}}
+</div>
+
+{{>partials/footer}}

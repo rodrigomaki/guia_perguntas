@@ -1,0 +1,16 @@
+{{>partials/header}}
+
+<div class="container">
+  {{#questions}}
+  <div class="card mb-5">
+    <div class="card-body">
+      <h3>{{title}}</h3>
+    </div>
+    <div class="card-footer">
+      <a href="/question/{{id}}" class="btn btn-primary">Responder</a>
+    </div>
+  </div>
+  {{/questions}}
+
+</div>
+{{>partials/footer}}
